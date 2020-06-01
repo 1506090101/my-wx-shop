@@ -1,0 +1,6 @@
+<!--pages/category/index.wxml-->
+<view class="category-index">
+	<!-- 搜索开始 -->
+	<SearchInput></SearchInput>
+	<!-- 搜索结束 -->
+</view>
