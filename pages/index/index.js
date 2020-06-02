@@ -1,5 +1,6 @@
 // pages/login/login.js
 import {request} from '../../request/index.js'
+import regeneratorRuntime from '../../lib/runtime/runtime'
 Page({
 
   /**
@@ -23,42 +24,29 @@ Page({
   },
 
 //获取swiper数据方法
-getSwiperData(){
-  request({url:'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'}).then(result=>{
+async getSwiperData(){
+  let result=await request({url:'/home/swiperdata'})
     this.setData({
-      swiperList:result.data.message   
+      swiperList:result
     })
-    console.log(result.data.message );
-  })
-  
+    console.log(result );
 },
 //获取nav数据方法
-getNavData(){
-  request({url:'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems'}).then(result=>{
+  async getNavData(){
+  let result =await request({url:'/home/catitems'})
     this.setData({
-      navList:result.data.message   
+      navList:result   
     })
-    console.log(result.data.message );
-  })
-  
+    console.log(result );
 },
 //获取 楼层 数据方法
-getFloorData(){
-  request({url:'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata'}).then(result=>{
+async getFloorData(){
+  let result=await request({url:'/home/floordata'})
     this.setData({
-      floorList:result.data.message   
+      floorList:result
     })
-    console.log(result.data.message );
-  })
-  
+    console.log(result );
 },
-
-
-
-
-
-
-
 
 
 })

@@ -4,6 +4,7 @@
 }
 .swiper_index img{
   width: 100%;
+  display: block;
 }
 
 .nav_index{

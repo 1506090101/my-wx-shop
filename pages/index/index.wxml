@@ -2,12 +2,10 @@
 
 	<!-- 搜索开始 -->
 
-	<SearchInput ></SearchInput>
+	<SearchInput></SearchInput>
 
-	
+
 	<!-- 搜索结束 -->
-
-
 
 	<!-- 轮播图开始 -->
 
@@ -31,44 +29,35 @@
 
 
 	<!-- 楼层html开始 -->
-<!-- 
+	<!-- 
 	<view class="floor_index">
 		<view wx:for="{{floorList}}" 
     wx:for-index="index1" 
     wx:for-item="item1" 
     wx:key="floor_title.image_src" > -->
-			<!-- 楼层标题 -->
-			<!-- <view class="floor-title">
+	<!-- 楼层标题 -->
+	<!-- <view class="floor-title">
 				<image src="{{itme1.floor_src.image_src}}"></image>
 			</view> -->
 
-			<!-- 楼层内容 -->
-		<!-- </view>
+	<!-- 楼层内容 -->
+	<!-- </view>
 	</view> -->
 
-  <view class="floor-index">
-  <view   
-  wx:for="{{floorList}}" 
-  wx:for-index="index1" wx:for-item="item1"
-  wx:key="floor_title.image_src" >
-  <!-- 楼层标题 -->
-      <view class="floor-title" > 
-      <image src='{{item1.floor_title.image_src}}' mode="widthFix" ></image>
-      </view>
-  <!-- 楼层内容 -->
-      <view class="floor-content">
-          <navigator   
-          wx:for="{{item1.product_list}}" 
-            wx:key="name"
-            wx:for-index="index2" 
-            wx:for-item="item2"
-             open-type="{{item2.open_type}}">
-            <image src="{{item2.image_src}}"   mode="{{index2===0?'widthFix':'scaleToFill'}}"></image>
-          </navigator> 
-      </view>
-
-    </view>
-</view>
+	<view class="floor-index">
+		<view wx:for="{{floorList}}" wx:for-index="index1" wx:for-item="item1" wx:key="image_src">
+			<!-- 楼层标题 -->
+			<view class="floor-title">
+				<image src='{{item1.floor_title.image_src}}' mode="widthFix"></image>
+			</view>
+			<!-- 楼层内容 -->
+			<view class="floor-content">
+				<navigator wx:for="{{item1.product_list}}" wx:key="name" wx:for-index="index2" wx:for-item="item2" open-type="{{item2.open_type}}">
+					<image src="{{item2.image_src}}" mode="{{index2===0?'widthFix':'scaleToFill'}}"></image>
+				</navigator>
+			</view>
+		</view>
+	</view>
 	<!-- 楼层html结束 -->
 
 </view>

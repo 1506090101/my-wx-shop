@@ -3,4 +3,41 @@
 	<!-- 搜索开始 -->
 	<SearchInput></SearchInput>
 	<!-- 搜索结束 -->
+	<!-- 内容开始 -->
+	<view class="container">
+		<!-- left start -->
+		<scroll-view scroll-y="true" style="height: 1000rpx; " class="leftMenu">
+			<view class="menu_item  {{currentIndex===index? 'active':'' }}"  wx:for="{{leftMenuList}}" wx:key="*this" bindtap="handlerChangeItem" data-index="{{index}}">{{item}}</view>
+
+		</scroll-view>
+		<!-- left end -->
+
+		<!-- right start -->
+		<scroll-view class="rightMenu" scroll-y style="height: 1000rpx;" scroll-top="{{scrollTop}}">
+
+			<view class="goods_container" wx:for="{{rightMenuList}}" wx:for-index='index1' wx:for-item='item1' wx:key="cat_name">
+				<!-- 上面标题开始 -->
+				<view class="goods_title">
+					<text class="deltirmer">/</text>
+					<text class="goods_title_name">{{item1.cat_name}}</text>
+					<text class="deltirmer">/</text>
+				</view>
+				<!-- 上面标题结束-->
+				<!-- 下面的图片展示开始 -->
+
+				<view class="goods_content">
+					<navigator wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat_icon" url="/pages/goods_list/index?cid={{item2.cat_id}}">
+						<image mode="widthFix" src="{{item2.cat_icon}}"></image>
+						<view class="text_name">{{item2.cat_name}}</view>
+					</navigator>
+				</view>
+				<!-- 下面的图片展示结束 -->
+				<!-- right end -->
+			</view>
+
+		</scroll-view>
+
+	</view>
+
+	<!-- 内容结束 -->
 </view>
