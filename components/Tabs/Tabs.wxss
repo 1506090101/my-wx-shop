@@ -4,7 +4,8 @@
 .tabs_container
 
 .tabs_title {
-  height: 60px;
+  height: 40px;
+  line-height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,4 +22,3 @@
 }
 
 
-.tabs_content{}

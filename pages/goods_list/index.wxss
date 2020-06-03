@@ -1,1 +1,38 @@
 /* pages/goods_list/index.wxss */
+
+/* 清除浮动 */
+.clearfix::before,
+.clearfix::after {
+    content: "0";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+
+.goods_content_list{
+  width: 100%;
+  
+}
+.goods_content_list .leftImg image{
+  width: 30%;
+  display: block;
+  float: left;
+}
+.goods_content_list .rightText {
+  width: 70%;
+  float: left;
+  
+}
+.goods_content_list .rightText .goods_name{
+  display: block;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+}
+.goods_content_list .rightText .price{
+  display: block;
+  margin-top: 40rpx;
+  color: red;
+  margin-left: 30rpx;
+}
